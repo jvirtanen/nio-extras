@@ -11,7 +11,7 @@
 
   <groupId>org.jvirtanen.nio</groupId>
   <artifactId>nio-extras</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
 
   <name>NIO Extras</name>
   <description>Extensions to Java NIO API.</description>
@@ -35,7 +35,7 @@
     <connection>scm:git:git@github.com:jvirtanen/nio-extras.git</connection>
     <developerConnection>scm:git:git@github.com:jvirtanen/nio-extras.git</developerConnection>
     <url>https://github.com/jvirtanen/nio-extras</url>
-    <tag>nio-extras-0.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>

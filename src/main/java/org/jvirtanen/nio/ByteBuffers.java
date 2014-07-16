@@ -26,6 +26,19 @@ public class ByteBuffers {
     }
 
     /**
+     * Absolute <em>get</em> method for reading an unsigned byte.
+     *
+     * @param buffer a buffer
+     * @param index the index from which the unsigned byte will be read
+     * @return the unsigned byte at the given index
+     * @throws IndexOutOfBoundsException if the index is negative or not
+     *   smaller than the buffer's limit
+     */
+    public static short getUnsigned(ByteBuffer buffer, int index) {
+        return (short)(buffer.get(index) & 0xff);
+    }
+
+    /**
      * Relative <em>put</em> method for writing an unsigned byte.
      *
      * @param buffer a buffer
@@ -39,6 +52,20 @@ public class ByteBuffers {
     }
 
     /**
+     * Absolute <em>put</em> method for writing an unsigned byte.
+     *
+     * @param buffer a buffer
+     * @param index the index at which the unsigned byte will be written
+     * @param b the unsigned byte
+     * @throws IndexOutOfBoundsException if the index is negative or not
+     *   smaller than the buffer's limit
+     * @throws ReadOnlyBufferException if the buffer is read-only
+     */
+    public static void putUnsigned(ByteBuffer buffer, int index, short b) {
+        buffer.put(index, (byte)b);
+    }
+
+    /**
      * Relative <em>get</em> method for reading an unsigned short value.
      *
      * @param buffer a buffer
@@ -48,6 +75,20 @@ public class ByteBuffers {
      */
     public static int getUnsignedShort(ByteBuffer buffer) {
         return (int)(buffer.getShort() & 0xffff);
+    }
+
+    /**
+     * Absolute <em>get</em> method for reading an unsigned short value.
+     *
+     * @param buffer a buffer
+     * @param index the index from which the unsigned short value will be
+     *   read
+     * @return the unsigned short value at the given index
+     * @throws IndexOutOfBoundsException if the index is negative or not
+     *   smaller than the buffer's limit, minus one
+     */
+    public static int getUnsignedShort(ByteBuffer buffer, int index) {
+        return (int)(buffer.getShort(index) & 0xffff);
     }
 
     /**
@@ -64,6 +105,21 @@ public class ByteBuffers {
     }
 
     /**
+     * Absolute <em>put</em> method for writing an unsigned short value.
+     *
+     * @param buffer a buffer
+     * @param index the index at which the unsigned short value will be
+     *   written
+     * @param value the unsigned short value
+     * @throws IndexOutOfBoundsException if the index is negative or not
+     *   smaller than the buffer's limit, minus one
+     * @throws ReadOnlyBufferException if the buffer is read-only
+     */
+    public static void putUnsignedShort(ByteBuffer buffer, int index, int value) {
+        buffer.putShort(index, (short)value);
+    }
+
+    /**
      * Relative <em>get</em> method for reading an unsigned integer value.
      *
      * @param buffer a buffer
@@ -73,6 +129,20 @@ public class ByteBuffers {
      */
     public static long getUnsignedInt(ByteBuffer buffer) {
         return (long)(buffer.getInt() & 0xffffffffL);
+    }
+
+    /**
+     * Absolute <em>get</em> method for reading an unsigned integer value.
+     *
+     * @param buffer a buffer
+     * @param index the index from which the unsigned integer value will be
+     *   read
+     * @return the unsigned integer value at the given index
+     * @throws IndexOutOfBoundsException if the index is negative or not
+     *   smaller than the buffer's limit, minus three
+     */
+    public static long getUnsignedInt(ByteBuffer buffer, int index) {
+        return (long)(buffer.getInt(index) & 0xffffffffL);
     }
 
     /**
@@ -86,6 +156,21 @@ public class ByteBuffers {
      */
     public static void putUnsignedInt(ByteBuffer buffer, long value) {
         buffer.putInt((int)value);
+    }
+
+    /**
+     * Absolute <em>put</em> method for writing an unsigned integer value.
+     *
+     * @param buffer a buffer
+     * @param index the index at which the unsigned integer value will be
+     *   written
+     * @param value the unsigned integer value
+     * @throws IndexOutOfBoundsException if the index is negative or not
+     *   smaller than the buffer's limit, minus three
+     * @throws ReadOnlyBufferException if the buffer is read-only
+     */
+    public static void putUnsignedInt(ByteBuffer buffer, int index, long value) {
+        buffer.putInt(index, (int)value);
     }
 
 }

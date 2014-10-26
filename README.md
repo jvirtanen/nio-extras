@@ -7,7 +7,7 @@ NIO Extras contains extensions to Java NIO API.
 Download
 --------
 
-Add a dependency to NIO Extras:
+Add a Maven dependency to NIO Extras:
 
     <dependency>
       <groupId>org.jvirtanen.nio</groupId>

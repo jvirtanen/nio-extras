@@ -3,6 +3,8 @@ NIO Extras
 
 NIO Extras contains extensions to Java NIO API.
 
+NIO Extras requires Java Runtime Environment (JRE) 7 or newer.
+
 
 Download
 --------
